@@ -1,0 +1,403 @@
+Last login: Wed Sep 13 09:08:35 on console
+Xins-MacBook-Pro:~ xin$ ls
+Desktop		Downloads	Movies		Pictures
+Documents	Library		Music		Public
+Xins-MacBook-Pro:~ xin$ mkdir test-git
+Xins-MacBook-Pro:~ xin$ cd test-git/
+Xins-MacBook-Pro:test-git xin$ git init
+Initialized empty Git repository in /Users/xin/test-git/.git/
+Xins-MacBook-Pro:test-git xin$ ls
+Xins-MacBook-Pro:test-git xin$ cp -r ../Desktop/Stock/ . 
+Xins-MacBook-Pro:test-git xin$ ls
+Podfile			Pods			Stock.xcodeproj
+Podfile.lock		Stock			Stock.xcworkspace
+Xins-MacBook-Pro:test-git xin$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   Stock/Assets.xcassets/Contents.json
+	new file:   Stock/Assets.xcassets/Journal.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/Journal.imageset/Journal.png
+	new file:   Stock/Assets.xcassets/email.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/email.imageset/email.png
+	new file:   Stock/Assets.xcassets/language.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/language.imageset/language.png
+	new file:   Stock/Assets.xcassets/logo.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/logo.imageset/logo.png
+	new file:   Stock/Assets.xcassets/message.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/message.imageset/message.png
+	new file:   Stock/Assets.xcassets/name.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/name.imageset/name.png
+	new file:   Stock/Assets.xcassets/news.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/news.imageset/news.png
+	new file:   Stock/Assets.xcassets/pic.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/pic.imageset/pic.png
+	new file:   Stock/Assets.xcassets/profile.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/profile.imageset/profile.png
+	new file:   Stock/Assets.xcassets/something.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/something.imageset/something.png
+	new file:   Stock/Assets.xcassets/something2.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/something2.imageset/something2.png
+	new file:   Stock/CollectionViewCell.swift
+	new file:   Stock/Custom.swift
+	new file:   Stock/Day.swift
+	deleted:    Stock/FirstViewController.swift
+	deleted:    Stock/SecondViewController.swift
+	deleted:    Stock/TabController.swift
+	renamed:    Stock/TableViewCell.swift -> Stock/TableViewCellA.swift
+	new file:   Stock/TableViewCellB.swift
+	new file:   Stock/TableViewCellC.swift
+	new file:   Stock/TableViewCellD.swift
+	new file:   Stock/TableViewRecordCell.swift
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Stock.xcodeproj/project.pbxproj
+	modified:   Stock/AccountController.swift
+	modified:   Stock/Base.lproj/Main.storyboard
+	modified:   Stock/CollectionViewCell.swift
+	modified:   Stock/Custom.swift
+	modified:   Stock/Day.swift
+	modified:   Stock/HistoryController.swift
+	modified:   Stock/HomeController.swift
+	modified:   Stock/InventoryController.swift
+	modified:   Stock/LoginController.swift
+	modified:   Stock/Month.swift
+	modified:   Stock/RecordController.swift
+	modified:   Stock/TableViewCellA.swift
+	modified:   Stock/TableViewCellB.swift
+	modified:   Stock/TableViewCellC.swift
+	modified:   Stock/TableViewCellD.swift
+	modified:   Stock/TableViewRecordCell.swift
+	modified:   Stock/Week.swift
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Podfile
+	Podfile.lock
+	Pods/
+	Stock.xcodeproj/xcuserdata/fred.xcuserdatad/xcdebugger/
+	Stock.xcodeproj/xcuserdata/xin.xcuserdatad/
+	Stock.xcworkspace/
+
+Xins-MacBook-Pro:test-git xin$ git add .
+Xins-MacBook-Pro:test-git xin$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   Podfile
+	new file:   Podfile.lock
+	new file:   Pods/Alamofire/LICENSE
+	new file:   Pods/Alamofire/README.md
+	new file:   Pods/Alamofire/Source/AFError.swift
+	new file:   Pods/Alamofire/Source/Alamofire.swift
+	new file:   Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+	new file:   Pods/Alamofire/Source/MultipartFormData.swift
+	new file:   Pods/Alamofire/Source/NetworkReachabilityManager.swift
+	new file:   Pods/Alamofire/Source/Notifications.swift
+	new file:   Pods/Alamofire/Source/ParameterEncoding.swift
+	new file:   Pods/Alamofire/Source/Request.swift
+	new file:   Pods/Alamofire/Source/Response.swift
+	new file:   Pods/Alamofire/Source/ResponseSerialization.swift
+	new file:   Pods/Alamofire/Source/Result.swift
+	new file:   Pods/Alamofire/Source/ServerTrustPolicy.swift
+	new file:   Pods/Alamofire/Source/SessionDelegate.swift
+	new file:   Pods/Alamofire/Source/SessionManager.swift
+	new file:   Pods/Alamofire/Source/TaskDelegate.swift
+	new file:   Pods/Alamofire/Source/Timeline.swift
+	new file:   Pods/Alamofire/Source/Validation.swift
+	new file:   Pods/Manifest.lock
+	new file:   Pods/Pods.xcodeproj/project.pbxproj
+	new file:   Pods/Pods.xcodeproj/xcuserdata/fred.xcuserdatad/xcschemes/Alamofire.xcscheme
+	new file:   Pods/Pods.xcodeproj/xcuserdata/fred.xcuserdatad/xcschemes/Pods-Stock.xcscheme
+	new file:   Pods/Pods.xcodeproj/xcuserdata/fred.xcuserdatad/xcschemes/xcschememanagement.plist
+	new file:   Pods/Pods.xcodeproj/xcuserdata/xin.xcuserdatad/xcschemes/Alamofire.xcscheme
+	new file:   Pods/Pods.xcodeproj/xcuserdata/xin.xcuserdatad/xcschemes/Pods-Stock.xcscheme
+	new file:   Pods/Pods.xcodeproj/xcuserdata/xin.xcuserdatad/xcschemes/xcschememanagement.plist
+	new file:   Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+	new file:   Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+	new file:   Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+	new file:   Pods/Target Support Files/Alamofire/Alamofire.modulemap
+	new file:   Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+	new file:   Pods/Target Support Files/Alamofire/Info.plist
+	new file:   Pods/Target Support Files/Pods-Stock/Info.plist
+	new file:   Pods/Target Support Files/Pods-Stock/Pods-Stock-acknowledgements.markdown
+	new file:   Pods/Target Support Files/Pods-Stock/Pods-Stock-acknowledgements.plist
+	new file:   Pods/Target Support Files/Pods-Stock/Pods-Stock-dummy.m
+	new file:   Pods/Target Support Files/Pods-Stock/Pods-Stock-frameworks.sh
+	new file:   Pods/Target Support Files/Pods-Stock/Pods-Stock-resources.sh
+	new file:   Pods/Target Support Files/Pods-Stock/Pods-Stock-umbrella.h
+	new file:   Pods/Target Support Files/Pods-Stock/Pods-Stock.debug.xcconfig
+	new file:   Pods/Target Support Files/Pods-Stock/Pods-Stock.modulemap
+	new file:   Pods/Target Support Files/Pods-Stock/Pods-Stock.release.xcconfig
+	modified:   Stock.xcodeproj/project.pbxproj
+	new file:   Stock.xcodeproj/xcuserdata/fred.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+	new file:   Stock.xcodeproj/xcuserdata/xin.xcuserdatad/xcschemes/Stock.xcscheme
+	new file:   Stock.xcodeproj/xcuserdata/xin.xcuserdatad/xcschemes/xcschememanagement.plist
+	new file:   Stock.xcworkspace/contents.xcworkspacedata
+	new file:   Stock.xcworkspace/xcuserdata/fred.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+	modified:   Stock/AccountController.swift
+	new file:   Stock/Assets.xcassets/Contents.json
+	new file:   Stock/Assets.xcassets/Journal.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/Journal.imageset/Journal.png
+	new file:   Stock/Assets.xcassets/email.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/email.imageset/email.png
+	new file:   Stock/Assets.xcassets/language.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/language.imageset/language.png
+	new file:   Stock/Assets.xcassets/logo.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/logo.imageset/logo.png
+	new file:   Stock/Assets.xcassets/message.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/message.imageset/message.png
+	new file:   Stock/Assets.xcassets/name.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/name.imageset/name.png
+	new file:   Stock/Assets.xcassets/news.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/news.imageset/news.png
+	new file:   Stock/Assets.xcassets/pic.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/pic.imageset/pic.png
+	new file:   Stock/Assets.xcassets/profile.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/profile.imageset/profile.png
+	new file:   Stock/Assets.xcassets/something.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/something.imageset/something.png
+	new file:   Stock/Assets.xcassets/something2.imageset/Contents.json
+	new file:   Stock/Assets.xcassets/something2.imageset/something2.png
+	modified:   Stock/Base.lproj/Main.storyboard
+	new file:   Stock/CollectionViewCell.swift
+	new file:   Stock/Custom.swift
+	new file:   Stock/Day.swift
+	deleted:    Stock/FirstViewController.swift
+	modified:   Stock/HistoryController.swift
+	modified:   Stock/HomeController.swift
+	modified:   Stock/InventoryController.swift
+	modified:   Stock/LoginController.swift
+	modified:   Stock/Month.swift
+	modified:   Stock/RecordController.swift
+	deleted:    Stock/SecondViewController.swift
+	deleted:    Stock/TabController.swift
+	renamed:    Stock/TableViewCell.swift -> Stock/TableViewCellA.swift
+	new file:   Stock/TableViewCellB.swift
+	new file:   Stock/TableViewCellC.swift
+	new file:   Stock/TableViewCellD.swift
+	new file:   Stock/TableViewRecordCell.swift
+	modified:   Stock/Week.swift
+
+Xins-MacBook-Pro:test-git xin$ git commit -m "inital commit" 
+[master 4e74f5c] inital commit
+ Committer: Xin Lyu <xin@Xins-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 94 files changed, 12329 insertions(+), 182 deletions(-)
+ create mode 100644 Podfile
+ create mode 100644 Podfile.lock
+ create mode 100644 Pods/Alamofire/LICENSE
+ create mode 100644 Pods/Alamofire/README.md
+ create mode 100644 Pods/Alamofire/Source/AFError.swift
+ create mode 100644 Pods/Alamofire/Source/Alamofire.swift
+ create mode 100644 Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+ create mode 100644 Pods/Alamofire/Source/MultipartFormData.swift
+ create mode 100644 Pods/Alamofire/Source/NetworkReachabilityManager.swift
+ create mode 100644 Pods/Alamofire/Source/Notifications.swift
+ create mode 100644 Pods/Alamofire/Source/ParameterEncoding.swift
+ create mode 100644 Pods/Alamofire/Source/Request.swift
+ create mode 100644 Pods/Alamofire/Source/Response.swift
+ create mode 100644 Pods/Alamofire/Source/ResponseSerialization.swift
+ create mode 100644 Pods/Alamofire/Source/Result.swift
+ create mode 100644 Pods/Alamofire/Source/ServerTrustPolicy.swift
+ create mode 100644 Pods/Alamofire/Source/SessionDelegate.swift
+ create mode 100644 Pods/Alamofire/Source/SessionManager.swift
+ create mode 100644 Pods/Alamofire/Source/TaskDelegate.swift
+ create mode 100644 Pods/Alamofire/Source/Timeline.swift
+ create mode 100644 Pods/Alamofire/Source/Validation.swift
+ create mode 100644 Pods/Manifest.lock
+ create mode 100644 Pods/Pods.xcodeproj/project.pbxproj
+ create mode 100644 Pods/Pods.xcodeproj/xcuserdata/fred.xcuserdatad/xcschemes/Alamofire.xcscheme
+ create mode 100644 Pods/Pods.xcodeproj/xcuserdata/fred.xcuserdatad/xcschemes/Pods-Stock.xcscheme
+ create mode 100644 Pods/Pods.xcodeproj/xcuserdata/fred.xcuserdatad/xcschemes/xcschememanagement.plist
+ create mode 100644 Pods/Pods.xcodeproj/xcuserdata/xin.xcuserdatad/xcschemes/Alamofire.xcscheme
+ create mode 100644 Pods/Pods.xcodeproj/xcuserdata/xin.xcuserdatad/xcschemes/Pods-Stock.xcscheme
+ create mode 100644 Pods/Pods.xcodeproj/xcuserdata/xin.xcuserdatad/xcschemes/xcschememanagement.plist
+ create mode 100644 Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+ create mode 100644 Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+ create mode 100644 Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+ create mode 100644 Pods/Target Support Files/Alamofire/Alamofire.modulemap
+ create mode 100644 Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+ create mode 100644 Pods/Target Support Files/Alamofire/Info.plist
+ create mode 100644 Pods/Target Support Files/Pods-Stock/Info.plist
+ create mode 100644 Pods/Target Support Files/Pods-Stock/Pods-Stock-acknowledgements.markdown
+ create mode 100644 Pods/Target Support Files/Pods-Stock/Pods-Stock-acknowledgements.plist
+ create mode 100644 Pods/Target Support Files/Pods-Stock/Pods-Stock-dummy.m
+ create mode 100755 Pods/Target Support Files/Pods-Stock/Pods-Stock-frameworks.sh
+ create mode 100755 Pods/Target Support Files/Pods-Stock/Pods-Stock-resources.sh
+ create mode 100644 Pods/Target Support Files/Pods-Stock/Pods-Stock-umbrella.h
+ create mode 100644 Pods/Target Support Files/Pods-Stock/Pods-Stock.debug.xcconfig
+ create mode 100644 Pods/Target Support Files/Pods-Stock/Pods-Stock.modulemap
+ create mode 100644 Pods/Target Support Files/Pods-Stock/Pods-Stock.release.xcconfig
+ create mode 100644 Stock.xcodeproj/xcuserdata/fred.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+ create mode 100644 Stock.xcodeproj/xcuserdata/xin.xcuserdatad/xcschemes/Stock.xcscheme
+ create mode 100644 Stock.xcodeproj/xcuserdata/xin.xcuserdatad/xcschemes/xcschememanagement.plist
+ create mode 100644 Stock.xcworkspace/contents.xcworkspacedata
+ create mode 100644 Stock.xcworkspace/xcuserdata/fred.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+ create mode 100644 Stock/Assets.xcassets/Contents.json
+ create mode 100644 Stock/Assets.xcassets/Journal.imageset/Contents.json
+ create mode 100644 Stock/Assets.xcassets/Journal.imageset/Journal.png
+ create mode 100644 Stock/Assets.xcassets/email.imageset/Contents.json
+ create mode 100644 Stock/Assets.xcassets/email.imageset/email.png
+ create mode 100644 Stock/Assets.xcassets/language.imageset/Contents.json
+ create mode 100644 Stock/Assets.xcassets/language.imageset/language.png
+ create mode 100644 Stock/Assets.xcassets/logo.imageset/Contents.json
+ create mode 100644 Stock/Assets.xcassets/logo.imageset/logo.png
+ create mode 100644 Stock/Assets.xcassets/message.imageset/Contents.json
+ create mode 100644 Stock/Assets.xcassets/message.imageset/message.png
+ create mode 100644 Stock/Assets.xcassets/name.imageset/Contents.json
+ create mode 100644 Stock/Assets.xcassets/name.imageset/name.png
+ create mode 100644 Stock/Assets.xcassets/news.imageset/Contents.json
+ create mode 100644 Stock/Assets.xcassets/news.imageset/news.png
+ create mode 100644 Stock/Assets.xcassets/pic.imageset/Contents.json
+ create mode 100644 Stock/Assets.xcassets/pic.imageset/pic.png
+ create mode 100644 Stock/Assets.xcassets/profile.imageset/Contents.json
+ create mode 100644 Stock/Assets.xcassets/profile.imageset/profile.png
+ create mode 100644 Stock/Assets.xcassets/something.imageset/Contents.json
+ create mode 100644 Stock/Assets.xcassets/something.imageset/something.png
+ create mode 100644 Stock/Assets.xcassets/something2.imageset/Contents.json
+ create mode 100644 Stock/Assets.xcassets/something2.imageset/something2.png
+ create mode 100644 Stock/CollectionViewCell.swift
+ create mode 100644 Stock/Custom.swift
+ create mode 100644 Stock/Day.swift
+ delete mode 100644 Stock/FirstViewController.swift
+ delete mode 100644 Stock/SecondViewController.swift
+ delete mode 100644 Stock/TabController.swift
+ rename Stock/{TableViewCell.swift => TableViewCellA.swift} (78%)
+ create mode 100644 Stock/TableViewCellB.swift
+ create mode 100644 Stock/TableViewCellC.swift
+ create mode 100644 Stock/TableViewCellD.swift
+ create mode 100644 Stock/TableViewRecordCell.swift
+Xins-MacBook-Pro:test-git xin$ git status
+On branch master
+nothing to commit, working tree clean
+Xins-MacBook-Pro:test-git xin$ git remote add origin https://github.com/lzywind/StockApp.git
+Xins-MacBook-Pro:test-git xin$ git push -u origin master
+Username for 'https://github.com': lzywind
+Password for 'https://lzywind@github.com': 
+Counting objects: 170, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (162/162), done.
+Writing objects: 100% (170/170), 207.48 KiB | 0 bytes/s, done.
+Total 170 (delta 59), reused 0 (delta 0)
+remote: Resolving deltas: 100% (59/59), done.
+To https://github.com/lzywind/StockApp.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+Xins-MacBook-Pro:test-git xin$ git checkout -b dev
+Switched to a new branch 'dev'
+Xins-MacBook-Pro:test-git xin$ ls
+Podfile			Pods			Stock.xcodeproj
+Podfile.lock		Stock			Stock.xcworkspace
+Xins-MacBook-Pro:test-git xin$ git status
+On branch dev
+nothing to commit, working tree clean
+Xins-MacBook-Pro:test-git xin$ ls
+Podfile			Pods			Stock.xcodeproj
+Podfile.lock		Stock			Stock.xcworkspace
+Xins-MacBook-Pro:test-git xin$ touch test.txt
+Xins-MacBook-Pro:test-git xin$ git add .
+Xins-MacBook-Pro:test-git xin$ git status
+On branch dev
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   test.txt
+
+Xins-MacBook-Pro:test-git xin$ git commit -m "new branch and file" 
+[dev a7f6579] new branch and file
+ Committer: Xin Lyu <xin@Xins-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+Xins-MacBook-Pro:test-git xin$ git push -u origin dev
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 285 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/lzywind/StockApp.git
+ * [new branch]      dev -> dev
+Branch dev set up to track remote branch dev from origin.
+Xins-MacBook-Pro:test-git xin$ ls
+Podfile			Stock			test.txt
+Podfile.lock		Stock.xcodeproj
+Pods			Stock.xcworkspace
+Xins-MacBook-Pro:test-git xin$ rm test.txt 
+Xins-MacBook-Pro:test-git xin$ git status
+On branch dev
+Your branch is up-to-date with 'origin/dev'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    test.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Xins-MacBook-Pro:test-git xin$ git rm test.txt
+rm 'test.txt'
+Xins-MacBook-Pro:test-git xin$ git status
+On branch dev
+Your branch is up-to-date with 'origin/dev'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    test.txt
+
+Xins-MacBook-Pro:test-git xin$ git commit -m "test.txt removed" 
+[dev 5a44fa2] test.txt removed
+ Committer: Xin Lyu <xin@Xins-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 test.txt
+Xins-MacBook-Pro:test-git xin$ git push -u origin dev
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 234 bytes | 0 bytes/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/lzywind/StockApp.git
+   a7f6579..5a44fa2  dev -> dev
+Branch dev set up to track remote branch dev from origin.
+Xins-MacBook-Pro:test-git xin$ 
